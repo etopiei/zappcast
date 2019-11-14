@@ -1,46 +1,46 @@
 <script>
-	export let name;
-	let email = "";
-	let subscribed = false;
-	const subscribe = () => {
-		fetch("https://75ehnbqn9b.execute-api.ap-southeast-2.amazonaws.com/default/writeEmailToDB", {method: "POST", mode: "no-cors", body: JSON.stringify({"email": email})});
-		email = "";
-		subscribed = true;
-	};
+    export let name;
+
+    import Home from './Home.svelte';
+    import About from './About.svelte';
+    import Archive from './Archive.svelte';
+
+    let current = 0;
+    const switchTo = (newView) => {
+        current = newView;
+    };
 </script>
 
 <style>
 	h1 {
 		color: #73007d;
 	}
-	.main {
-		margin-left: 10%;
-		margin-right: 10%;
-	}
-	.subbed {
-		background-color: #d0ffd0;
-	}
-	img {
-		width: 200px;
-	}
+    .top {
+        margin-bottom: 2rem;
+    }
+    span {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .active {
+        font-weight: bold;
+    }
 </style>
 
 <center>
-<div class="main">
-	<h1>{name}</h1>
-	<p>ZappCast is a programming podcast coming soon <br> ... <br> If you are interested in programming, banter, and the tech industry then this may just be the podcast for you.</p>
-	<p>Look out for our logo wherever you get your podcasts! </p>
-	<img src="logo.png" alt="logo">
-	<h4> Enter your email to be notified when we get started! *</h4>
-	{#if !subscribed}
-		<form>
-			<input placeholder="Email" bind:value={email}/>
-			<button on:click={() => subscribe()}>Submit</button>
-		</form>
-	{:else}
-		<p class="subbed"> You have been subscribed! </p>
-	{/if}
-	<p> *By signing up to receive this email notification you are also permitting us to email you any advertising offers that may or may not interest you.</p>
-	<p> Totally kidding, we'll only email you once the first episode is out. </p>
-</div>
+    <div class="top">
+            <h1>{name}</h1>
+            <span on:click={() => switchTo(0)} class:active={current === 0}>Home</span>
+            - 
+            <span on:click={() => switchTo(1)} class:active={current === 1}>About</span>
+            - 
+            <span on:click={() => switchTo(2)} class:active={current === 2}>Archive</span>
+    </div>
+    {#if current == 0}
+        <Home/>
+    {:else if current == 1}
+        <About/>
+    {:else}
+        <Archive/>
+    {/if}
 </center>
