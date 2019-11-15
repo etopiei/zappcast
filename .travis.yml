@@ -1,17 +1,17 @@
 language: node_js
 node_js:
-  - "9"
+- '9'
 before_deploy:
-  - npm run build
+- npm run build
 deploy:
   provider: s3
   access_key_id: AKIAUWTGZJ4AECYSUNP4
-  secret_access_key:
-    secure: DI1MzK+5m7ZI+9m+oGWf5iomNuRyUnO+mb0F+sGtSDv7OyIXFAg2VQC4dmaQBUy2kXr/ygTFXSIjj6gm4qtGzn2WzQmF3FIpnCDuO+yEQfU/dhmZYTN0kKbalV4B7JDnqFKAC8VI+MMZJ+QfuIFbGJUmdI5SvrDq+IXeoRHiUr/tq6dyhpmh6R8gxxb5NSu6oo1ta/Ow/s45SW5IETeH9rEHcCFX/i6+nXJxoog6VZgwvyDhpAPjuJj20F4CufgjcTPombHtR5t8AMJGyzsNRuS27JRcVGr1CKfSusJlFhRMu42deMHTT46/Otxlurw2QCSdXeBuD70m/tZe8KUrdMKL2686a9o/sGdvmWTuQuVfnfCU4snACcdTeu65dyMsDpshimmKVjIZWW3VzKVvHgyaysTkfXkF/0mO2ob44uGG0LSdWPjQMfV97WJJeWQtzppkDkkpFCMy+iWLH6SA6O692GlS/msusEPWSuZSq8nlcVZIOUpoZk+UKhYj+nfpNAJCme/X64yJkkIYJXu0islVayqN0PXuiBUSPBGhFdeoIOyF5mPXeZ9qbQqlVuPutbYjY88mOwn7DH7Yao18MI+7T8WjlF28TnLHg/WtSQeG/EscvYBLbOr1GolqByYHSO6ZBsozfzFVif7WsORDG63iC9pwyH2oK/HAFyK7dzM=
   bucket: zappcast.com
   local-dir: public
   acl: public_read
   skip_cleanup: true
-  region: ap-southeast-2 
+  region: ap-southeast-2
   on:
     repo: etopiei/zappcast
+  secret_access_key:
+    secure: XKT7hr6LZgm6urEyfZHxNjlkIxJKZQtBiMnDFfd5cOHI4zjvktRAarhCXVldUBlV9M81LBb6PZ4kHqyM2JFOZya72hg2FBPbIbjl8/9XYSdTMGiBQIqljWcPlYT0DG5aUqHbT882ji1dzUTjlCONDqaZi7jn0L2m1vuFrcO6rImFA1mC53LZVAmH5kHVVUGhLnrov97zqeBg5vq5zyeOp27Csk54H39dubUtno8uWC+1PEj19TGZ+QgO3SmNLQguigPqaqWaJnNV/AaK66RszOTDABDsN6fG1F2vANb+NYjOHOcQ9Gn7MpUyzCLsQ+62JUM/oc7pkDARxXiKFIIV5GTQyx8NBVa2zdZANrcrYn33cTksa0RCp7PKT+zI1a42RkvPL8fx2fbHja1by6qd/bF7whYfECcW/ND7DVbuq0pv9fArIVxKsF+aGfFYMnpH/rL0VOQitRW78j7+jntQL61vIEyN8R3zX6HwGX6Rd6MZ4L3ZV2He9a6THbylbw+aKTjPJRQpkDUWMrbGnuE9zPIJc4bqvBvasOyu48WpjyljHxsQM3nRpklS/kgiTc/p3aGabsfHZi2dFYsBayALgq+ldPyVaDzK5RFsuWpOXSRxdDIYMEfqFIZXob+YEyY7qjL92jTvOkz8b0AUe6pUZHAYAjZreS907p+dtPL9Tbw=
