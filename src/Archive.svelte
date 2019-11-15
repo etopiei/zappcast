@@ -1,1 +1,1 @@
-<p>Episodes will be updated here.</p>
+<p>Episodes will be added here as they come out.</p>

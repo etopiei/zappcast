@@ -6,5 +6,6 @@ ZappCast consists of three members:
         <li>Lachlan Jacob</li>
     </ul>
 Having met at University we share a passion for programming and are hoping to share this
-with our listeners.
+with our listeners. <br>
+Follow: <a href="https://twitter.com/zappcast">@zappcast</a> on twitter.
 </div>
