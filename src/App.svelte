@@ -13,7 +13,7 @@
 
 <style>
 	h1 {
-		color: #73007d;
+		color: white;
 	}
     .top {
         margin-bottom: 2rem;
