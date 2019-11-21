@@ -22,25 +22,24 @@
 </script>
 
 <style>
-    div {
-        display: flow-root;
-        height: 100%;
+    .everything {
         background-color: white;
+        min-height: 100%;
         color: black;
     }
     button {
-        position: absolute;
-        right: 10px;
-        top: 10px;
         padding: 20px;
         color: black;
         background-color: white;
     }
 	h1 {
-		color: #73007d;
+        color: #73007d;
+        margin: 0;
 	}
     .top {
         margin-bottom: 2rem;
+        background-color: white;
+        color: black;
     }
     span {
         text-decoration: underline;
@@ -58,8 +57,7 @@
     }
 </style>
 
-<div class:dark={theme === "dark"}>
-    <button on:click={toggleTheme}>Turn Lights {theme === "light" ? "Off" : "On"} 💡</button>
+<div class="everything" class:dark={theme === "dark"}>
     <center>
         <div class="top">
                 <h1>{name}</h1>
@@ -69,6 +67,7 @@
                 - 
                 <span on:click={() => switchTo(2)} class:active={current === 2}>Archive</span>
         </div>
+        <button on:click={toggleTheme}>Turn Lights {theme === "light" ? "Off" : "On"} 💡</button>
         {#if current == 0}
             <Home/>
         {:else if current == 1}

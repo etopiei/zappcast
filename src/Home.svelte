@@ -19,6 +19,10 @@
 	img {
 		width: 200px;
 	}
+	p {
+		padding: 8px;
+		margin: 0;
+	}
 </style>
 
 <div class="main">
